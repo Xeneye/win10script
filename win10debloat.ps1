@@ -72,7 +72,7 @@ $tweaks = @(
 	# "DisableFirewall",            # "EnableFirewall",
 	"DisableDefender",            # "EnableDefender",
 	"DisableDefenderCloud",       # "EnableDefenderCloud",
-	"EnableF8BootMenu",             # "DisableF8BootMenu",
+	"DisableF8BootMenu",             # "EnableF8BootMenu",
 	#"SetDEPOptOut",                 # "SetDEPOptIn",
 	# "EnableCIMemoryIntegrity",    # "DisableCIMemoryIntegrity",
 	#"DisableScriptHost",            # "EnableScriptHost",
@@ -120,7 +120,7 @@ $tweaks = @(
 	"DisableNewAppPrompt",          # "EnableNewAppPrompt",
 	# "SetControlPanelSmallIcons",  # "SetControlPanelLargeIcons",  # "SetControlPanelCategories",
 	# "SetVisualFXPerformance",     # "SetVisualFXAppearance",
-	# "AddENKeyboard",              # "RemoveENKeyboard",
+	"RemoveENKeyboard",             # "AddENKeyboard",
 	"EnableNumlock",             	# "DisableNumlock",
 	"EnableDarkMode",				# "DisableDarkMode",
 	"Stop-EdgePDF",
@@ -129,7 +129,7 @@ $tweaks = @(
 	"ShowKnownExtensions",          # "HideKnownExtensions",
 	# "ShowHiddenFiles",              # "HideHiddenFiles",
 	"HideSyncNotifications"         # "ShowSyncNotifications",
-	# "HideRecentShortcuts",          # "ShowRecentShortcuts",
+	"HideRecentShortcuts",          # "ShowRecentShortcuts",
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
 	"HideThisPCFromDesktop",	# "ShowThisPCOnDesktop",
 	# "ShowUserFolderOnDesktop",    # "HideUserFolderFromDesktop",
@@ -162,7 +162,7 @@ $tweaks = @(
 	"UninstallInternetExplorer",  # "InstallInternetExplorer",
 	"UninstallWorkFolders",       # "InstallWorkFolders",
 	"InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
-	# "InstallHyperV",              # "UninstallHyperV",
+	"UninstallHyperV",              # "InstallHyperV",
 	"SetPhotoViewerAssociation",    # "UnsetPhotoViewerAssociation",
 	"AddPhotoViewerOpenWith",       # "RemovePhotoViewerOpenWith",
 	"UninstallPDFPrinter",		# "InstallPDFPrinter",
@@ -2563,13 +2563,13 @@ Function DebloatAll {
         "*Dolby*"
              
         #Optional: Typically not removed but you can if you need to for some reason
-        #"*Microsoft.Advertising.Xaml_10.1712.5.0_x64__8wekyb3d8bbwe*"
-        #"*Microsoft.Advertising.Xaml_10.1712.5.0_x86__8wekyb3d8bbwe*"
-        #"*Microsoft.BingWeather*"
-        #"*Microsoft.MSPaint*"
-        #"*Microsoft.MicrosoftStickyNotes*"
+        "*Microsoft.Advertising.Xaml_10.1712.5.0_x64__8wekyb3d8bbwe*"
+        "*Microsoft.Advertising.Xaml_10.1712.5.0_x86__8wekyb3d8bbwe*"
+        "*Microsoft.BingWeather*"
+        "*Microsoft.MSPaint*"
+        "*Microsoft.MicrosoftStickyNotes*"
         #"*Microsoft.Windows.Photos*"
-        #"*Microsoft.WindowsCalculator*"
+        "*Microsoft.WindowsCalculator*"
         #"*Microsoft.WindowsStore*"
     )
     foreach ($Bloat in $Bloatware) {
